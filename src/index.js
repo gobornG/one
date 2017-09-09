@@ -16,8 +16,14 @@ class App extends React.Component {
         this.setState( {
             count: event.target.value,
         });
-        console.log(event.target.value);
-        
+        console.log(event.target.value);   
+    }
+
+    drawBox(){
+        for (var i = 1; i <= 10; i++) {
+            //enter code here 
+        }
+        return <div className="block">{this.state.count}</div>
     }
 
     render() {
@@ -29,7 +35,7 @@ class App extends React.Component {
                         min="0" />
                 </div>
                 <br />
-                <div className="block">1</div>
+                {this.drawBox()}
                 <div className="block">2</div>
                 <div className="block">3</div>
             </div>
