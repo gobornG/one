@@ -6,23 +6,19 @@ class App extends React.Component {
         super();
 
         this.state = {
-            count: 4,
+            count: 5,
         };
         this.onInputChange = this.onInputChange.bind(this);
-
     }
 
-    onInputChange(event) {
+    onInputChange(event, prop) {
         this.setState( {
             count: event.target.value,
         });
-        console.log(event.target.value);   
+        console.log(event.target.value);
     }
 
     drawBox(){
-        for (var i = 1; i <= 10; i++) {
-            //enter code here 
-        }
         return <div className="block">{this.state.count}</div>
     }
 
@@ -35,9 +31,9 @@ class App extends React.Component {
                         min="0" />
                 </div>
                 <br />
-                {this.drawBox()}
-                <div className="block">2</div>
-                <div className="block">3</div>
+                {this.drawBox()};
+                {this.drawBox()};
+                {this.drawBox()};
             </div>
         );
     }
